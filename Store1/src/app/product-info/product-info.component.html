@@ -1,0 +1,13 @@
+<h2>Product details</h2>
+<hr>
+
+<div>
+    
+    <h3> {{product.name}} </h3>
+    <h4> {{product.price | currency }}</h4>
+    <p> {{product.description}} </p>
+    <div class="d-flex align-items-center">
+            <button class="btn btn-primary mr-2" (click)="addToCart() ; increaseCounter()"> Add to cart</button>
+            <p *ngIf="showCounter" class="small" > Narucili ste   <span [class.red-text]="counter > 0">{{ counter }}</span>  {{counter===1? product.name : product.name +'a'}}  </p>
+    </div>
+</div>
